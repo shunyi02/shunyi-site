@@ -27,11 +27,6 @@ nav ul a.here{color:var(--ink);font-weight:500}
 .group{padding-block:88px 0}
 .pcard .proj-top .st{font-size:12.5px;padding:4px 11px}
 .pcard.wide{grid-column:1/-1;padding:30px}
-.pc-foot{margin-top:auto;padding-top:10px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-.pc-foot .stack{margin:0;padding:0}
-.pc-link{display:inline-flex;align-items:center;gap:5px;font-size:14px;font-weight:500;text-decoration:none;color:var(--ink);position:relative;z-index:1}
-.pc-link svg{width:15px;height:15px;transition:transform .25s}
-.pc-link:hover svg{transform:translate(2px,-2px)}
 .soon-label{margin-top:88px}
 #surat.group{padding-top:0}
 .back-home{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:500;text-decoration:none;color:var(--ink);padding:8px 16px 8px 12px;border-radius:999px;background:var(--surface);box-shadow:0 0 0 1px var(--line);transition:box-shadow .2s}
@@ -59,7 +54,7 @@ nav ul a.here{color:var(--ink);font-weight:500}
         <p class="role">Side products and tools I design, build and ship on my own time.</p>
         <div class="legend">
           <a class="st shipped" href="#shipped"><i></i>2 shipped</a>
-          <a class="st wip" href="#in-progress"><i></i>1 in progress</a>
+          <a class="st wip" href="#in-progress"><i></i>2 in progress</a>
           <a class="st soon" href="#surat"><i></i>1 coming soon</a>
         </div>
       </div>
@@ -78,16 +73,23 @@ nav ul a.here{color:var(--ink);font-weight:500}
         <article class="proj pcard">
           <div class="proj-top"><span class="st shipped"><i></i>Shipped</span><span class="tag">Final year project · 2024</span></div>
           <h3>Malaysia stock equity advisory tool</h3>
-          <p>A web application with a neural network model that forecasts Malaysian stock prices and gives investment recommendations.</p>
-          <div class="pc-foot"><span class="stack">Neural networks · Python · Web app</span><a class="pc-link" href="https://github.com/shunyi02" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div>
+          <p>A web application with a neural network model that forecasts Malaysian stock prices and gives investment recommendations. The model work compares ReLU, Sigmoid and Tanh networks across training runs.</p>
+          <div class="pc-foot"><span class="stack">Neural networks · Python · Flask</span><span class="pc-links"><a class="pc-link" href="https://github.com/shunyi02/Malaysia-Stock-Market-Advisory-Tool" target="_blank" rel="noopener">Web app <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a><a class="pc-link" href="https://github.com/shunyi02/Malaysia-Stock-Market-Prediction-Model-with-Neural-Network-Method" target="_blank" rel="noopener">Model <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></span></div>
         </article>
     </div>
   </section>
 
   <section id="in-progress" class="group">
-    <div class="sec-label"><div><div class="label">In progress</div><h2>Currently building</h2></div><span class="count">1 product</span></div>
+    <div class="sec-label"><div><div class="label">In progress</div><h2>Currently building</h2></div><span class="count">2 products</span></div>
     <div class="grid">
-        <article class="proj pcard wide">
+        <article class="proj pcard">
+          <div class="proj-top"><span class="st wip"><i></i>In progress</span><span class="tag">Personal · 2026</span></div>
+          <h3>Cuti</h3>
+          <p>A trip planner for groups: one shared itinerary and one shared expense ledger, built for anything from a weekend for two to a 15-person trip that splits into sub-groups on some days.</p>
+          <ul class="points"><li>Day-by-day itinerary with route map and weather</li><li>Sub-groups drawn as their own route lines</li><li>Expense splitting with receipts, tax and settle-up</li><li>Budget reports with PDF and CSV export</li></ul>
+          <div class="pc-foot"><span class="stack">NestJS · Prisma · PostgreSQL · React · Expo</span><a class="pc-link" href="https://github.com/shunyi02/TravelPlanner" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div>
+        </article>
+        <article class="proj pcard">
           <div class="proj-top"><span class="st wip"><i></i>In progress</span><span class="tag">Personal · 2026</span></div>
           <h3>AI agent office</h3>
           <p>A virtual office of role-based AI agents (engineer, PM, QA, data analyst) organized into departments. Agents hold meetings, and the whole office is shown in an interactive 3D view.</p>

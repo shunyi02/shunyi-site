@@ -123,6 +123,12 @@ section > *{min-width:0}
 .points li::marker{color:var(--accent)}
 .award-card .place{font-family:var(--f-display);font-size:30px;font-weight:700;letter-spacing:-.02em;color:var(--accent);line-height:1.1}
 .award-card .event{font-family:var(--f-mono);font-size:12px;letter-spacing:.04em;color:var(--muted);margin-bottom:8px}
+.pc-foot{margin-top:auto;padding-top:10px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.pc-foot .stack{margin:0;padding:0}
+.pc-links{display:flex;gap:16px;flex-wrap:wrap}
+.pc-link{display:inline-flex;align-items:center;gap:5px;font-size:14px;font-weight:500;text-decoration:none;color:var(--ink);position:relative;z-index:1}
+.pc-link svg{width:15px;height:15px;transition:transform .25s}
+.pc-link:hover svg{transform:translate(2px,-2px)}
 @media (max-width:880px){.grid.three{grid-template-columns:1fr 1fr}}
 @media (max-width:620px){.grid.three,.points{grid-template-columns:1fr}.proj.feature{padding:24px}.tabs{border-radius:16px}}
 
@@ -304,7 +310,8 @@ footer .m{font-family:var(--f-mono);font-size:12.5px}
 .see-all{display:inline-flex;align-items:center;gap:6px;font-size:14.5px;font-weight:500;text-decoration:none}
 .see-all svg{width:16px;height:16px;transition:transform .25s}
 .see-all:hover svg{transform:translateX(3px)}
-.pgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.pgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.pmini.span2{grid-column:span 2}
 .pmini{display:flex;flex-direction:column;gap:10px;padding:22px;border-radius:16px;background:var(--surface);box-shadow:0 0 0 1px var(--line);
   text-decoration:none;color:var(--ink);transition:transform .25s ease,box-shadow .25s ease;min-width:0}
 .pmini:hover{transform:translateY(-3px);box-shadow:0 14px 30px -16px rgba(0,0,0,.25),0 0 0 1px var(--accent)}
@@ -319,7 +326,7 @@ footer .m{font-family:var(--f-mono);font-size:12.5px}
 .pmini.dark .st{background:rgba(224,160,69,.12);box-shadow:inset 0 0 0 1px rgba(224,160,69,.35);color:var(--amber)}
 .pmini.dark .st i{background:var(--amber);animation:pulse 2s infinite}
 @media (max-width:880px){.pgrid{grid-template-columns:1fr 1fr}}
-@media (max-width:520px){.pgrid{grid-template-columns:1fr}}
+@media (max-width:520px){.pgrid{grid-template-columns:1fr}.pmini.span2{grid-column:auto}}
 @media (prefers-reduced-motion:reduce){.pmini,.pmini:hover{transform:none;transition:none}.pmini.dark .st i{animation:none}}
 
 /* skills toolbox */

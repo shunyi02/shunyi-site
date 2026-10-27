@@ -231,15 +231,15 @@
         <div class="place">2nd Runner Up</div>
         <div class="event">BRIDGE3 Hackathon · Malaysia Blockchain Week 2024</div>
         <h3>Blockchain fund management</h3>
-        <p>A fund management system built on blockchain technology.</p>
-        <div class="stack">Blockchain · Web app</div>
+        <p>A fund management system built on blockchain, with user wallets and fund and token transactions recorded on the MasChain network.</p>
+        <div class="pc-foot"><span class="stack">Blockchain · Flask · MongoDB</span><a class="pc-link" href="https://github.com/shunyi02/Roti-Canai-2.0" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div>
       </article>
       <article class="proj award-card">
         <div class="place">Top 13 Finalist</div>
         <div class="event">Alibaba Cloud Malaysia AI Hackathon 2025</div>
         <h3>AI-powered inventory management</h3>
-        <p>An inventory system that uses AI to support stock decisions.</p>
-        <div class="stack">Alibaba Cloud · AI</div>
+        <p>POPWARUNG: inventory and sales forecasting for small retail stores, with an LSTM model predicting demand and an AI assistant on Alibaba Cloud's DashScope.</p>
+        <div class="pc-foot"><span class="stack">LSTM · FastAPI · React · Alibaba Cloud</span><a class="pc-link" href="https://github.com/shunyi02/POPWARUNG" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div>
       </article>
     </div>
   </section>
@@ -259,13 +259,19 @@
         <p>Neural-network price forecasts for Malaysian stocks.</p>
         <span class="pm-meta">Final year project · 2024</span>
       <span class="pm-more">View details</span></button>
+      <button type="button" class="pmini" data-p="cuti" aria-haspopup="dialog">
+        <span class="st wip"><i></i>In progress</span>
+        <h3>Cuti</h3>
+        <p>Group trip planner with a shared itinerary and expense splitting.</p>
+        <span class="pm-meta">Web · Mobile · API</span>
+      <span class="pm-more">View details</span></button>
       <button type="button" class="pmini" data-p="office" aria-haspopup="dialog">
         <span class="st wip"><i></i>In progress</span>
         <h3>AI agent office</h3>
         <p>Role-based AI agents working together in a 3D office.</p>
         <span class="pm-meta">Multi-agent · 3D web</span>
       <span class="pm-more">View details</span></button>
-      <button type="button" class="pmini dark" data-p="surat" aria-haspopup="dialog">
+      <button type="button" class="pmini dark span2" data-p="surat" aria-haspopup="dialog">
         <span class="st soon"><i></i>Coming soon</span>
         <h3>Surat</h3>
         <p>A project management tool, built the way I deliver projects.</p>
@@ -467,7 +473,7 @@ document.querySelectorAll('.copy').forEach(function(b){
   }
 
   /* product pop-up */
-  var PD={"digest": {"st": "shipped", "stl": "Shipped · migrating to Apps Script", "t": "Daily stock digest", "m": "Personal product · 2026", "a": "shipped", "d": "An automated email that lands every morning with what moved in the markets and why. It saves me from checking several sites before work.", "p": ["Covers US, Malaysian and Singapore markets", "Prices from Yahoo Finance, headlines from Google News", "Claude writes a short, plain-language summary", "Moving from a Python script to Google Apps Script"], "s": ["Python", "Google Apps Script", "Claude API"]}, "fyp": {"st": "shipped", "stl": "Shipped", "t": "Malaysia stock equity advisory tool", "m": "Final year project · UTAR · 2024", "a": "shipped", "d": "A web application that uses a neural network to forecast Malaysian stock prices and turn the forecasts into investment recommendations.", "p": ["Neural network model trained on historical price data", "Forecasts future prices for Malaysian equities", "Gives buy, hold or sell style recommendations", "Delivered as a web application"], "s": ["Neural networks", "Python", "Web app"]}, "office": {"st": "wip", "stl": "In progress", "t": "AI agent office", "m": "Personal product · 2026", "a": "in-progress", "d": "A virtual office where role-based AI agents (engineer, PM, QA, data analyst) work together in departments, shown in an interactive 3D view.", "p": ["Role-based agents grouped into departments", "Agent meetings to plan and review work", "3D office view of who is doing what", "A testbed for multi-agent workflows"], "s": ["Multi-agent", "LLMs", "3D web"]}, "surat": {"st": "soon", "stl": "Coming soon", "t": "Surat", "m": "Project management tool", "a": "surat", "d": "A project management tool I'm building, shaped by how I actually plan and deliver projects.", "p": ["Plan projects on a timeline with milestones", "Track tasks and progress in one place", "Keep stakeholders aligned without extra meetings"], "s": ["Project management", "Web app"]}};
+  var PD={"digest": {"st": "shipped", "stl": "Shipped · migrating to Apps Script", "t": "Daily stock digest", "m": "Personal product · 2026", "a": "shipped", "d": "An automated email that lands every morning with what moved in the markets and why. It saves me from checking several sites before work.", "p": ["Covers US, Malaysian and Singapore markets", "Prices from Yahoo Finance, headlines from Google News", "Claude writes a short, plain-language summary", "Moving from a Python script to Google Apps Script"], "s": ["Python", "Google Apps Script", "Claude API"]}, "fyp": {"st": "shipped", "stl": "Shipped", "t": "Malaysia stock equity advisory tool", "m": "Final year project · UTAR · 2024", "a": "shipped", "d": "A web application that uses a neural network to forecast Malaysian stock prices and turn the forecasts into investment recommendations.", "p": ["Neural network model trained on historical price data", "Forecasts future prices for Malaysian equities", "Gives buy, hold or sell style recommendations", "Delivered as a web application"], "s": ["Neural networks", "Python", "Flask"]}, "cuti": {"st": "wip", "stl": "In progress", "t": "Cuti", "m": "Personal product · 2026", "a": "in-progress", "d": "A trip planner for groups: one shared itinerary and one shared expense ledger, from a weekend for two to a 15-person trip that splits into sub-groups on some days.", "p": ["Day-by-day itinerary with route map and weather", "Sub-groups drawn as their own route lines", "Expense splitting with receipts, tax and settle-up", "Budget reports with PDF and CSV export"], "s": ["NestJS", "Prisma", "PostgreSQL", "React", "Expo"]}, "office": {"st": "wip", "stl": "In progress", "t": "AI agent office", "m": "Personal product · 2026", "a": "in-progress", "d": "A virtual office where role-based AI agents (engineer, PM, QA, data analyst) work together in departments, shown in an interactive 3D view.", "p": ["Role-based agents grouped into departments", "Agent meetings to plan and review work", "3D office view of who is doing what", "A testbed for multi-agent workflows"], "s": ["Multi-agent", "LLMs", "3D web"]}, "surat": {"st": "soon", "stl": "Coming soon", "t": "Surat", "m": "Project management tool", "a": "surat", "d": "A project management tool I'm building, shaped by how I actually plan and deliver projects.", "p": ["Plan projects on a timeline with milestones", "Track tasks and progress in one place", "Keep stakeholders aligned without extra meetings"], "s": ["Project management", "Web app"]}};
   var dlg=document.getElementById('pdlg');
   function openP(k,btn){
     var d=PD[k]; if(!d||!dlg) return;
