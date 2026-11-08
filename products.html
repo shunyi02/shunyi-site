@@ -6,7 +6,7 @@
 <title>Products · Ng Shun Yi</title>
 <meta name="description" content="Products built by Ng Shun Yi: shipped, in progress and coming soon, including Surat, a project management tool.">
 <meta name="author" content="Ng Shun Yi">
-<meta name="theme-color" content="#17191C">
+<meta name="theme-color" content="#FF4500">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Products · Ng Shun Yi">
 <meta property="og:description" content="Products built by Ng Shun Yi: shipped, in progress and coming soon, including Surat, a project management tool.">
@@ -19,10 +19,9 @@
 <style>
 .phero .hero-inner{padding:72px 56px 64px}
 .phero h1{font-size:clamp(40px,5.6vw,60px)}
-.phero::after{display:none}
 .legend{display:flex;gap:8px;flex-wrap:wrap;margin-top:26px}
-.legend .st{text-decoration:none;color:var(--hero-ink);background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
-.legend .st:hover{background:rgba(255,255,255,.16)}
+.legend .st{text-decoration:none;color:var(--ink);background:var(--snow);box-shadow:inset 0 0 0 2px var(--ink);transition:transform .15s ease}
+.legend .st:hover{transform:translateY(-2px)}
 nav ul a.here{color:var(--ink);font-weight:500}
 .group{padding-block:88px 0}
 .pcard .proj-top .st{font-size:12.5px;padding:4px 11px}
@@ -46,7 +45,6 @@ nav ul a.here{color:var(--ink);font-weight:500}
   </nav>
 
   <header class="hero phero" id="top">
-    <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
     <div class="hero-inner">
       <div class="hero-text">
         <div class="label">Products</div>
@@ -178,44 +176,16 @@ document.querySelectorAll('.copy').forEach(function(b){
 (function(){
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, fine=matchMedia('(hover: hover) and (pointer: fine)').matches;
   if(!reduce) document.documentElement.classList.add('js');
-  if(!reduce && 'IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
-    ['.sec-label','.pcard','.soon-copy > *','.link-card'].forEach(function(sel){
-      var n=new Map();
-      [].forEach.call(document.querySelectorAll(sel),function(el){
-        if(el.getBoundingClientRect().top<innerHeight) return;
-        var k=el.parentNode,i=n.get(k)||0;n.set(k,i+1);el.style.setProperty('--d',Math.min(i*80,400)+'ms');el.classList.add('rv');io.observe(el);
-      });
-    });
-  }
   if(fine){
     [].forEach.call(document.querySelectorAll('.proj'),function(c){
-      c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
-        c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%');
-        if(!reduce){c.style.setProperty('--ry',((x-.5)*5).toFixed(2)+'deg');c.style.setProperty('--rx',((.5-y)*5).toFixed(2)+'deg');}});
-      c.addEventListener('pointerleave',function(){c.style.setProperty('--rx','0deg');c.style.setProperty('--ry','0deg')});
+      c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();
+        c.style.setProperty('--mx',(e.clientX-r.left)/r.width*100+'%');c.style.setProperty('--my',(e.clientY-r.top)/r.height*100+'%');});
     });
   }
   var mock=document.querySelector('.mock');
   if(mock){ if(reduce||!('IntersectionObserver' in window)) mock.classList.add('go');
     else { var mo=new IntersectionObserver(function(es){ if(es[0].isIntersecting){ mock.classList.add('go'); mo.disconnect(); } },{threshold:.4}); mo.observe(mock); } }
 })();
-</script>
-<script type="module">
-const hero=document.getElementById('top'), canvas=document.getElementById('hero-canvas');
-const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
-if('gpu' in navigator){
-  try{
-    const { createShader } = await import('https://cdn.jsdelivr.net/npm/shaders@4.0.4/dist/js/bundle.js');
-    await createShader(canvas,{disableTelemetry:true,components:[
-      {type:'MeshGradient',id:'mesh',props:{stops:[{color:'#121316',position:0},{color:'#1F2125',position:.45},{color:'#3A332B',position:.72},{color:'#B87A2E',position:.9},{color:'#E0A045',position:1}],colorSpace:'oklab',count:5,smoothness:2.2,swirl:.3,drift:.5,speed:still?0:.3,seed:23}},
-      {type:'Grid',id:'grid',props:{color:'#F5E6CC',cells:16,thickness:1,opacity:.08}},
-      {type:'Circle',id:'glow',props:{color:'#F2B35C',radius:.22,softness:1,center:still?{x:.75,y:.45}:{type:'mouse-position',smoothing:.08,momentum:.15},opacity:.5,blendMode:'screen'}},
-      {type:'FilmGrain',id:'grain',props:{strength:.06,animated:!still}}
-    ],onError:()=>hero.classList.remove('gpu')});
-    requestAnimationFrame(()=>hero.classList.add('gpu'));
-  }catch(e){}
-}
 </script>
 </body>
 </html>
