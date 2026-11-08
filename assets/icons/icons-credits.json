@@ -95,6 +95,18 @@
     "markUrl": "https://github.com/"
   },
   {
+    "file": "googlegemini.svg",
+    "icon": "si:googlegemini",
+    "name": "Google Gemini",
+    "kind": "mono",
+    "source": "simple-icons@16.30.0",
+    "author": "Simple Icons Collaborators",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/simple-icons/simple-icons",
+    "trademark": true,
+    "colour": "one-colour fallback in the brand hex"
+  },
+  {
     "file": "linux-tux.svg",
     "icon": "logos:linux-tux",
     "name": "Linux",
@@ -105,6 +117,18 @@
     "url": "https://github.com/gilbarbara/logos",
     "trademark": true,
     "markUrl": "https://en.wikipedia.org/wiki/Tux_(mascot)"
+  },
+  {
+    "file": "linux.svg",
+    "icon": "si:linux",
+    "name": "Linux",
+    "kind": "mono",
+    "source": "simple-icons@16.30.0",
+    "author": "Simple Icons Collaborators",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/simple-icons/simple-icons",
+    "trademark": true,
+    "colour": "one-colour fallback in the brand hex"
   },
   {
     "file": "monday.svg",
