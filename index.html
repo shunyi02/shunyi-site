@@ -89,10 +89,10 @@
           <h3>Digital Systems Engineer</h3>
           <div class="org">Acclaim Systems Pte. Ltd. · Singapore</div>
           <ul>
-            <li><b>Project leadership:</b> leading the company's digital transformation on a one-year roadmap, currently on schedule: planning, Gantt scheduling, stakeholder coordination and rollout to 80–100 users.</li>
-            <li><b>ERP implementation:</b> taking the company from no ERP to a fully digitized operation on Odoo, from planning through to deployment, including the inventory data model, product classes, master products and variants, and how non-stock project purchases are handled.</li>
-            <li><b>Data migration:</b> cleaning and restructuring legacy stock records into an import-ready format.</li>
-            <li><b>Odoo customization:</b> building custom module features such as product display-name logic.</li>
+            <li><b>Project planning:</b> planning and scheduling digitalization work, and coordinating with stakeholders across teams.</li>
+            <li><b>ERP implementation:</b> working on an Odoo ERP implementation, from requirements and business-flow mapping through configuration, testing and rollout.</li>
+            <li><b>Data migration:</b> cleaning and restructuring legacy records into an import-ready format.</li>
+            <li><b>Odoo customization:</b> building custom module features.</li>
             <li><b>AI integration:</b> finding where AI can take manual work out of day-to-day operations.</li>
           </ul>
         </div>
@@ -103,10 +103,10 @@
           <h3>Product Specialist, SaaS Solutions</h3>
           <div class="org">Plover Trip Pte. Ltd. · Singapore</div>
           <ul>
-            <li><b>Project delivery:</b> managed delivery for around 15 SaaS subscribers across Malaysia, the Philippines, Indonesia, Pakistan, Taiwan and more, turning business requirements into scalable solutions and improving product adoption.</li>
-            <li><b>API integration:</b> connected the platform with airlines, GDS providers and hotel aggregators for reliable booking connectivity.</li>
-            <li><b>AI initiatives:</b> built AI analysis across news sources to surface relevant business-travel news and cut manual work.</li>
-            <li><b>Cloud database operations:</b> supported, maintained and optimized databases for system stability.</li>
+            <li><b>Project delivery:</b> managed delivery for SaaS clients across the Asia-Pacific region, turning business requirements into working solutions and supporting product adoption.</li>
+            <li><b>API integration:</b> worked on integrations with travel suppliers such as airlines, GDS providers and hotel aggregators.</li>
+            <li><b>AI initiatives:</b> built an AI workflow that reads news sources and surfaces relevant business-travel news.</li>
+            <li><b>Cloud database operations:</b> supported and maintained cloud databases.</li>
           </ul>
         </div>
       </li>
@@ -117,8 +117,8 @@
           <div class="org">Onnet Consulting Sdn. Bhd. · Malaysia</div>
           <ul>
             <li><b>ERP development:</b> developed and customized Odoo ERP systems for clients across different industries.</li>
-            <li><b>AI chatbot:</b> built an AI chatbot with a RAG system that analyses customer-reported issues and guides users to a resolution.</li>
-            <li><b>Server maintenance:</b> worked with system analysts to find and fix root causes of downtime.</li>
+            <li><b>AI chatbot:</b> built an AI chatbot with a RAG system that reads reported issues and guides users to a resolution.</li>
+            <li><b>Server maintenance:</b> worked with system analysts to trace and fix the causes of downtime.</li>
           </ul>
         </div>
       </li>
@@ -164,12 +164,12 @@
             <p>Scope, timeline, milestones and who signs off. It all goes on one Gantt schedule the whole team works from.</p>
             <div class="mo-pc__visual mo-pc__visual--lit" aria-hidden="true">
               <div class="win">
-                <div class="mock-bar"><i></i><i></i><i></i><span>Project plan · Gantt</span></div>
+                <div class="mock-bar"><i></i><i></i><i></i><span>Project plan · Phases</span></div>
                 <div class="win-body">
-                  <div class="win-row"><b>Discovery</b><span class="tick red">Done</span></div>
-                  <div class="win-row"><b>Data model</b><span class="tick red">Done</span></div>
-                  <div class="win-row"><b>Build &amp; UAT</b><span class="tick">In progress</span></div>
-                  <div class="win-row"><b>Go-live</b><span class="tick">Planned</span></div>
+                  <div class="win-row"><b>Discovery</b><span class="tick red">Scope</span></div>
+                  <div class="win-row"><b>Design</b><span class="tick red">Sign-off</span></div>
+                  <div class="win-row"><b>Build &amp; test</b><span class="tick">UAT</span></div>
+                  <div class="win-row"><b>Go-live</b><span class="tick">Cutover</span></div>
                 </div>
               </div>
             </div>
@@ -179,11 +179,11 @@
             <p>I map how the business runs today, find the gaps, then design the data model and configuration that closes them.</p>
             <div class="mo-pc__visual mo-pc__visual--lit" aria-hidden="true">
               <div class="win">
-                <div class="mock-bar"><i></i><i></i><i></i><span>Process flow · Purchasing</span></div>
+                <div class="mock-bar"><i></i><i></i><i></i><span>Requirements · Gap analysis</span></div>
                 <div class="win-body">
-                  <div class="flow"><span>Request</span><i>→</i><span>Purchase</span><i>→</i><span>Receive</span><i>→</i><span>Stock</span></div>
-                  <div class="flow"><span class="gap">Non-stock project buys</span><i>→</i><span>Costing</span></div>
-                  <div class="win-note">Gap found: project purchases skip inventory</div>
+                  <div class="flow"><span>How it runs today</span><i>→</i><span class="gap">Gaps</span></div>
+                  <div class="flow"><span>Target design</span><i>→</i><span>Configuration</span></div>
+                  <div class="win-note">Every gap traced to a requirement</div>
                 </div>
               </div>
             </div>
@@ -193,12 +193,12 @@
             <p>Configuration and custom modules are built against a tracker, then users run real cases in UAT before anything goes live.</p>
             <div class="mo-pc__visual mo-pc__visual--lit" aria-hidden="true">
               <div class="win">
-                <div class="mock-bar"><i></i><i></i><i></i><span>UAT log · Inventory</span></div>
+                <div class="mock-bar"><i></i><i></i><i></i><span>Test plan · UAT</span></div>
                 <div class="win-body">
-                  <div class="win-row"><b>Create product variants</b><span class="tick">Passed</span></div>
-                  <div class="win-row"><b>Import cleaned stock</b><span class="tick">Passed</span></div>
-                  <div class="win-row"><b>Product display names</b><span class="tick">Passed</span></div>
-                  <div class="win-row"><b>Leftover project units</b><span class="tick red">Retest</span></div>
+                  <div class="win-row"><b>Test cases from requirements</b><span class="tick">Write</span></div>
+                  <div class="win-row"><b>Users run real scenarios</b><span class="tick">Run</span></div>
+                  <div class="win-row"><b>Issues logged and fixed</b><span class="tick">Fix</span></div>
+                  <div class="win-row"><b>Fixes checked again</b><span class="tick red">Retest</span></div>
                 </div>
               </div>
             </div>
@@ -210,9 +210,9 @@
               <div class="win">
                 <div class="mock-bar"><i></i><i></i><i></i><span>Cutover plan</span></div>
                 <div class="win-body">
-                  <div class="win-big">80–100 users</div>
+                  <div class="win-big">Day one</div>
                   <div class="win-row"><b>Data migrated</b><span class="tick">Ready</span></div>
-                  <div class="win-row"><b>Teams trained</b><span class="tick">Ready</span></div>
+                  <div class="win-row"><b>Users trained</b><span class="tick">Ready</span></div>
                   <div class="win-row"><b>Support after go-live</b><span class="tick">Ready</span></div>
                 </div>
               </div>
@@ -234,20 +234,20 @@
 
     <div class="grid three" role="tabpanel" id="panel-work" aria-labelledby="tab-work">
       <article class="proj feature">
-        <div class="proj-top"><span class="tag">Work · Acclaim Systems · 2026</span><span class="pill">Planning → deployment</span></div>
-        <h3>Company-wide digitization on Odoo ERP</h3>
+        <div class="proj-top"><span class="tag">Work · Acclaim Systems · 2026</span><span class="pill">In progress</span></div>
+        <h3>ERP implementation on Odoo</h3>
         <div class="kpis">
-          <div><span class="k">1 year</span><span class="kl">Roadmap</span></div>
-          <div><span class="k">On schedule</span><span class="kl">Status</span></div>
-          <div><span class="k">80–100</span><span class="kl">Users</span></div>
-          <div><span class="k">Company-wide</span><span class="kl">Scope</span></div>
+          <div><span class="k">Odoo</span><span class="kl">Platform</span></div>
+          <div><span class="k">Planning</span><span class="kl">My part</span></div>
+          <div><span class="k">Data</span><span class="kl">My part</span></div>
+          <div><span class="k">Build</span><span class="kl">My part</span></div>
         </div>
-        <p>Took the company from no ERP to a fully digitized operation on Odoo, end to end: project planning, requirements and business-flow mapping, data model and migration, customization, testing and deployment.</p>
+        <p>Working on an ERP implementation on Odoo across the full cycle: planning, requirements and business-flow mapping, data model and migration, customization, testing and rollout.</p>
         <ul class="points">
-          <li>Built the inventory catalogue from scratch: product classes, master products and variants</li>
-          <li>Migrated and cleaned the legacy stock record into an import-ready structure</li>
-          <li>Defined how non-stock project purchases and leftover units flow through inventory and costing</li>
-          <li>Custom module work, including product naming logic</li>
+          <li>Inventory and product data modelling</li>
+          <li>Cleaning and importing legacy records</li>
+          <li>Mapping business flows into ERP processes</li>
+          <li>Custom Odoo module work</li>
         </ul>
         <div class="stack">Odoo · Python · PostgreSQL · Data migration · System testing</div>
       </article>
@@ -447,8 +447,23 @@
 </dialog>
 
   <footer>
+    <div class="dino-track">
+      <button type="button" class="dino" aria-pressed="false" aria-label="Pause the running dino">
+        <svg viewBox="0 0 12 11" aria-hidden="true" focusable="false" fill="currentColor">
+          <rect x="6" y="0" width="5" height="1"/><rect x="5" y="1" width="7" height="2"/><rect x="5" y="3" width="5" height="1"/>
+          <rect x="0" y="4" width="1" height="1"/><rect x="4" y="4" width="5" height="1"/>
+          <rect x="0" y="5" width="2" height="1"/><rect x="3" y="5" width="7" height="1"/>
+          <rect x="1" y="6" width="8" height="1"/><rect x="2" y="7" width="6" height="1"/><rect x="3" y="8" width="4" height="1"/>
+          <rect class="eye" x="9" y="1" width="1" height="1"/>
+          <rect class="spike" x="3" y="4" width="1" height="1"/><rect class="spike" x="2" y="5" width="1" height="1"/>
+          <g class="leg-a"><rect x="3" y="9" width="1" height="1"/><rect x="6" y="9" width="1" height="1"/><rect x="3" y="10" width="2" height="1"/></g>
+          <g class="leg-b"><rect x="3" y="9" width="1" height="1"/><rect x="6" y="9" width="1" height="1"/><rect x="6" y="10" width="2" height="1"/></g>
+        </svg>
+      </button>
+    </div>
     <span>© 2026 Ng Shun Yi</span>
     <span class="m">Singapore · UTC+8 · Product names and logos are trademarks of their owners</span>
+    <p class="privacy"><b>Privacy:</b> this site sets no cookies and runs no analytics or tracking, and I don't collect any personal data. Fonts load from Google Fonts, and the host, Vercel, keeps standard server logs.</p>
   </footer>
 </div>
 
@@ -552,5 +567,6 @@ document.querySelectorAll('.copy').forEach(function(b){
 })();
 </script>
 <script type="module" src="assets/moments/moments.js"></script>
+<script src="assets/dino.js" defer></script>
 </body>
 </html>

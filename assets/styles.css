@@ -222,6 +222,28 @@ section > *{min-width:0}
 footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:28px 40px;border-top:2px solid var(--line);font-size:13.5px}
 footer .m{font-family:var(--f-mono);font-size:12.5px}
 
+/* the footer dino: a pixel dino runs right, turns and runs back along a dashed blue ground line.
+   assets/dino.js starts it only while the footer is on screen; hover or a click pauses it */
+.dino-track{flex-basis:100%;width:100%;position:relative;height:56px;margin-top:-6px;border-bottom:2px dashed var(--blue);container-type:inline-size}
+.dino{position:absolute;left:0;bottom:2px;width:48px;height:44px;padding:0;border:0;background:none;cursor:pointer;color:var(--ink)}
+.dino svg{display:block;width:48px;height:44px;shape-rendering:crispEdges}
+.dino .leg-b{visibility:hidden}
+.dino-track.on .dino{animation:dino-x 9s linear infinite}
+.dino-track.on .dino .leg-a{animation:dino-step .3s steps(1) infinite}
+.dino-track.on .dino .leg-b{animation:dino-step .3s steps(1) infinite reverse}
+.dino-track.on .dino svg{animation:dino-bob .3s steps(1) infinite}
+.dino:hover,.dino:hover *,.dino[aria-pressed="true"],.dino[aria-pressed="true"] *{animation-play-state:paused!important}
+.dino:focus-visible{outline:2px solid var(--ink);outline-offset:4px;border-radius:6px}
+@keyframes dino-x{
+  0%{transform:translateX(0) scaleX(1)}
+  49.9%{transform:translateX(calc(100cqw - 48px)) scaleX(1)}
+  50%{transform:translateX(calc(100cqw - 48px)) scaleX(-1)}
+  99.9%{transform:translateX(0) scaleX(-1)}
+  100%{transform:translateX(0) scaleX(1)}}
+@keyframes dino-step{0%{visibility:visible}50%{visibility:hidden}}
+@keyframes dino-bob{0%{transform:none}50%{transform:translateY(-2px)}}
+@media (prefers-reduced-motion:reduce){.dino-track.on .dino,.dino-track.on .dino *{animation:none}.dino .leg-b{visibility:hidden}}
+
 /* delivery: the pinned steps (assets/moments/pinned-chapters) and the drawn window each step shows */
 #delivery .mo-pc__text h2{font-size:clamp(28px,3.4vw,36px);font-weight:700;letter-spacing:-.02em;margin-top:-16px}
 #delivery .mo-pc__step{border-left-width:3px}
@@ -379,3 +401,7 @@ button.pmini{font:inherit;text-align:left;cursor:pointer;width:100%}
   .tab-ind,.topbar,.job::before{transition:none}
   .fade .proj{animation:none}
 }
+.dino .eye{fill:var(--paper)}
+.dino .spike{fill:var(--lime)}
+/* the privacy note: the last line of the footer */
+footer .privacy{flex-basis:100%;max-width:72ch;font-size:12.5px;line-height:1.6}

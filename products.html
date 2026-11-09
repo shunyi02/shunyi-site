@@ -158,8 +158,23 @@ nav ul a.here{color:var(--ink);font-weight:500}
   </section>
 
   <footer>
+    <div class="dino-track">
+      <button type="button" class="dino" aria-pressed="false" aria-label="Pause the running dino">
+        <svg viewBox="0 0 12 11" aria-hidden="true" focusable="false" fill="currentColor">
+          <rect x="6" y="0" width="5" height="1"/><rect x="5" y="1" width="7" height="2"/><rect x="5" y="3" width="5" height="1"/>
+          <rect x="0" y="4" width="1" height="1"/><rect x="4" y="4" width="5" height="1"/>
+          <rect x="0" y="5" width="2" height="1"/><rect x="3" y="5" width="7" height="1"/>
+          <rect x="1" y="6" width="8" height="1"/><rect x="2" y="7" width="6" height="1"/><rect x="3" y="8" width="4" height="1"/>
+          <rect class="eye" x="9" y="1" width="1" height="1"/>
+          <rect class="spike" x="3" y="4" width="1" height="1"/><rect class="spike" x="2" y="5" width="1" height="1"/>
+          <g class="leg-a"><rect x="3" y="9" width="1" height="1"/><rect x="6" y="9" width="1" height="1"/><rect x="3" y="10" width="2" height="1"/></g>
+          <g class="leg-b"><rect x="3" y="9" width="1" height="1"/><rect x="6" y="9" width="1" height="1"/><rect x="6" y="10" width="2" height="1"/></g>
+        </svg>
+      </button>
+    </div>
     <span>© 2026 Ng Shun Yi</span>
     <span class="m">Singapore · UTC+8</span>
+    <p class="privacy"><b>Privacy:</b> this site sets no cookies and runs no analytics or tracking, and I don't collect any personal data. Fonts load from Google Fonts, and the host, Vercel, keeps standard server logs.</p>
   </footer>
 </div>
 <script>
@@ -187,5 +202,6 @@ document.querySelectorAll('.copy').forEach(function(b){
     else { var mo=new IntersectionObserver(function(es){ if(es[0].isIntersecting){ mock.classList.add('go'); mo.disconnect(); } },{threshold:.4}); mo.observe(mock); } }
 })();
 </script>
+<script src="assets/dino.js" defer></script>
 </body>
 </html>
