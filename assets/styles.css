@@ -22,10 +22,10 @@
 .spec,.win,.mark,.tb,.s-ico,.link-card .ico,.dl,.tab-ind,.btn.primary,.mini.primary,.pt-go,.topbar ul a.active,.legend .st,.back-home,.soon-panel .mock{
   --bg:var(--coal); --card:var(--coal); --ink:var(--paper); --line:var(--paper); --muted:var(--paper)}
 /* blue bands */
-#projects,.kit.pm,.pmini.dark,.soon-panel{
+#projects,.kit.is-on,.pmini.dark,.soon-panel{
   --bg:var(--blue); --card:var(--blue); --ink:var(--paper); --line:var(--paper); --muted:var(--paper)}
 /* paper again inside a band or a black panel */
-#projects .proj,.kit.pm .tool,.kit.pm .s-ico,.spec .s-ico,.pd-card{
+#projects .proj,.kit.is-on .tool,.kit.is-on .s-ico,.spec .s-ico,.pd-card{
   --bg:var(--paper); --card:var(--paper); --ink:var(--coal); --line:var(--coal); --muted:var(--coal)}
 /* the serif italic word in a heading */
 h1 em,h2 em,.mo-wh__text em{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:0}
@@ -102,7 +102,7 @@ section > *{min-width:0}
 #projects + section{padding-top:104px}
 
 /* timeline */
-.timeline{list-style:none;margin:0;padding:0 0 0 26px;border-left:2px solid var(--line);display:grid;gap:44px;position:relative}
+.timeline{list-style:none;margin:0;padding:0 0 0 26px;border-left:2px solid var(--line);display:grid;gap:36px;position:relative}
 .job{position:relative;display:grid;grid-template-columns:150px 1fr;gap:24px}
 .job::before{content:"";position:absolute;left:-33px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--line);transition:background .35s}
 .job.current::before,.job.lit::before{background:var(--lime)}
@@ -111,9 +111,10 @@ section > *{min-width:0}
 .now::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 1.5px var(--ink)}
 .job h3{font-size:20px;font-weight:700}
 .org{margin-top:2px;font-size:15px;font-family:var(--f-mono)}
-.job ul{margin:14px 0 0;padding-left:18px;display:grid;gap:6px;max-width:66ch}
-.job li::marker{color:var(--blue)}
-.job li b{font-weight:700}
+/* each role: one line on what it was, then its skills as tags */
+.job-line{margin-top:10px;max-width:60ch}
+.job-tags{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.job-tags li{font-family:var(--f-mono);font-size:12px;padding:2px 10px;border-radius:999px;border:1.5px solid var(--line)}
 /* the timeline fills with yellow as it scrolls past */
 .timeline::before{content:"";position:absolute;left:-2px;top:0;width:2px;height:calc(var(--tp,0) * 100%);background:var(--blue)}
 
@@ -132,6 +133,7 @@ section > *{min-width:0}
 .points{margin:4px 0 0;padding-left:18px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 28px;font-size:14.5px}
 .points li::marker{color:var(--ink)}
 .grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid.three .proj:not(.feature) .points{grid-template-columns:1fr}
 .proj.feature{grid-column:1/-1;padding:32px}
 .proj.feature h3{font-size:23px}
 .award-card .place{font-family:var(--f-display);font-size:30px;font-weight:700;letter-spacing:-.02em;line-height:1.1;}
@@ -168,7 +170,12 @@ section > *{min-width:0}
 .skills.kits{gap:16px}
 .skills h3{font-size:16px;font-weight:700;margin-bottom:12px}
 .kit{background:var(--card);color:var(--ink);border-radius:18px;border:2px solid var(--line);padding:24px;display:flex;flex-direction:column;gap:12px;min-width:0}
-.kit.pm{box-shadow:8px 8px 0 var(--coal)}
+/* the skill cards: click (or Enter / Space) one and it alone turns blue */
+.kit{cursor:pointer;transition:background-color .25s ease,color .25s ease,box-shadow .2s ease,transform .2s ease}
+.kit:hover{transform:translateY(-2px);box-shadow:var(--pop)}
+.kit.is-on,.kit.is-on:hover{box-shadow:8px 8px 0 var(--coal)}
+.kit:focus-visible{outline:2px solid var(--coal);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){.kit,.kit:hover{transition:none;transform:none}}
 .kit-head{display:flex;align-items:center;gap:12px;margin-bottom:4px}
 .kit-head h3{font-size:18px;margin:0}
 .kit-sub{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
