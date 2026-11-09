@@ -104,13 +104,14 @@ nav ul a.here{color:var(--ink);font-weight:500}
       <div class="soon-copy">
         <span class="soon-pill"><span class="pulse" aria-hidden="true"></span>MVP · live</span>
         <h2>Surat</h2>
-        <p class="soon-tag">A project management tool shaped by how I plan and deliver projects. The MVP is live and ready to use. Email me if you'd like to try it.</p>
+        <p class="soon-tag">A project management tool shaped by how I plan and deliver projects. The MVP is live and ready to use. Register your interest and I'll get in touch.</p>
         <ul class="soon-feat">
           <li>Plan projects on a timeline with milestones</li>
           <li>Track tasks and progress in one place</li>
           <li>Keep stakeholders aligned without extra meetings</li>
         </ul>
-        <div class="cta"><a class="btn primary" href="mailto:nshunyi02@gmail.com?subject=Interested%20in%20Surat">Email me to try Surat</a><a class="btn" href="https://surat-ticketing.vercel.app/" target="_blank" rel="noopener">Open Surat</a></div>
+        <div class="cta"><!-- Paste your Tally form ID into data-tally (the part after tally.so/r/). Empty = plain email link. -->
+          <a class="btn primary" id="surat-interest" data-tally="RWd15d" href="mailto:nshunyi02@gmail.com?subject=Interested%20in%20Surat">Register interest in Surat</a></div>
       </div>
       <div class="mock" aria-hidden="true">
         <div class="mock-bar"><i></i><i></i><i></i><span>Surat · Project timeline</span></div>
@@ -175,7 +176,7 @@ nav ul a.here{color:var(--ink);font-weight:500}
     </div>
     <span>© 2026 Ng Shun Yi</span>
     <span class="m">Singapore · UTC+8</span>
-    <p class="privacy"><b>Privacy:</b> this site sets no cookies and runs no analytics or tracking, and I don't collect any personal data. Fonts load from Google Fonts, and the host, Vercel, keeps standard server logs. If you email me, for example about Surat, I only use your address to reply.</p>
+    <p class="privacy"><b>Privacy:</b> this site sets no cookies and runs no analytics or tracking. Fonts load from Google Fonts, and the host, Vercel, keeps standard server logs. The Surat interest form is run by Tally and only loads when you open it: what you enter there is stored with Tally and only used to contact you about Surat. If you email me, I only use your address to reply.</p>
   </footer>
 </div>
 <script>
@@ -204,5 +205,6 @@ document.querySelectorAll('.copy').forEach(function(b){
 })();
 </script>
 <script src="assets/dino.js" defer></script>
+<script src="assets/surat-form.js" defer></script>
 </body>
 </html>
