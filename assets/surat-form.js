@@ -1,6 +1,6 @@
 /* Surat interest form: the "Register interest" button opens a Tally form in a pop-up.
-   Set data-tally on the button to your Tally form ID (the part after tally.so/r/). Until it is set,
-   the button stays a plain email link. Tally's script loads only when someone clicks, so a visitor
+   Set data-tally on the button to your Tally form ID (the part after tally.so/r/); the button's href
+   is the form's own page, used without script. Tally's script loads only when someone clicks, so a visitor
    who never opens the form loads nothing from Tally. */
 (function(){
   var btn=document.getElementById('surat-interest');

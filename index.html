@@ -397,11 +397,12 @@
           <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></span>
           <div class="lc-body">
             <span class="label">Email</span>
-            <span class="v" id="email">nshunyi02@gmail.com</span>
+            <span class="v">Write to me directly</span>
           </div>
           <div class="lc-actions">
-            <a class="mini primary" href="mailto:nshunyi02@gmail.com">Send email</a>
-            <button class="mini copy" type="button" id="copy-email" data-copy="nshunyi02@gmail.com">Copy</button>
+            <!-- the address is kept reversed in two parts and joined only on click (assets/contact.js) -->
+            <button class="mini primary mail" type="button" data-a="20iynuhsn" data-b="moc.liamg">Send email</button>
+            <button class="mini copy" type="button" data-a="20iynuhsn" data-b="moc.liamg">Copy address</button>
           </div>
         </div>
         <a class="link-card go" href="https://www.linkedin.com/in/shun-yi-ng/" target="_blank" rel="noopener">
@@ -464,16 +465,6 @@
   </footer>
 </div>
 
-<script>
-document.querySelectorAll('.copy').forEach(function(b){
-  b.addEventListener('click',function(){
-    var t=b.getAttribute('data-copy');
-    function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)}
-    function fallback(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected'}
-    try{navigator.clipboard.writeText(t).then(done,fallback)}catch(e){fallback()}
-  });
-});
-</script>
 <script>
 (function(){
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -572,6 +563,7 @@ document.querySelectorAll('.copy').forEach(function(b){
 })();
 </script>
 <script type="module" src="assets/moments/moments.js"></script>
+<script src="assets/contact.js" defer></script>
 <script src="assets/dino.js" defer></script>
 </body>
 </html>
